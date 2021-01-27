@@ -15,7 +15,8 @@
 
             <!-- Fonts -->
             <link rel="preconnect" href="https://fonts.gstatic.com">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
             <!-- Alpine JS -->
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -30,22 +31,73 @@
             <script src="js/app.js" defer></script>
     </head>
 
-    <body class="bg-gray-200" style="font-family: Montserrat; letter-spacing: -0.1em;">
+    <body class="bg-gray-200" style="font-family: Montserrat;">
         
         <!-- Scroll testing purposes -->
         <div class="hero h-screen bg-gray-600"></div>
 
-        <!-- Title -->
-        <div class="flex flex-col justify-center w-full h-screen pl-48">
-            <div class="gsap-title absolute z-50 ml-2">
-                <h1 class="text-7xl text-gray-900 font-extrabold uppercase text-opacity-90">Articles</h1>
+        
+        <div class="max-w-5xl mx-auto mt-10 mb-20">
+            <!-- Title -->
+            <div class="flex flex-col justify-center mb-24">
+                <div class="gsap-title absolute z-50">
+                    <h1 class="text-7xl text-gray-900 font-extrabold uppercase text-opacity-90" style="letter-spacing: -0.1em;">Articles</h1>
+                </div>
+                <div class="gsap-subtitle">
+                    <h2 class="relative top-10 text-9xl text-gray-400 font-extrabold uppercase z-10 text-opacity-40 -ml-2" style="letter-spacing: -0.1em;">Decouvrir</h2>
+                </div>
             </div>
-            <div class="gsap-subtitle">
-                <h2 class="relative top-10 text-9xl text-gray-400 font-extrabold uppercase z-10 text-opacity-40">Decouvrir</h2>
-            </div>
+
+            <!-- Aricles Grid -->
+            <div class="grid lg:grid-cols-2 gap-8">
+                <a href="#" 
+                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                >
+                    <img src="https://picsum.photos/id/236/800/500" alt="" class="object-cover">
+                    
+                    <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">A la rencontre des mondes...</h4>
+                    <p class="mx-10 mb-10 text-sm uppercase text-gray-600 font-normal">Voyage & Inspiration</p>
+                    <!-- <p class="mx-10 mb-10 text-xs text-blue-400">#voyage #inspiration #essaie #pensee</p> -->
+                    <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
+                    <p class="mx-10 mb-10 text-xs text-right italic text-gray-400">Written by @sylent, 2 hours ago</p>
+                </a>
+
+                <a href="#" 
+                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                >
+                    <img src="https://picsum.photos/id/209/800/500" alt="" class="object-cover">
+                    
+                    <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">Mise en cache des routes</h4>
+                    <p class="mx-10 mb-10 text-sm uppercase text-gray-600 font-normal">Laravel 8</p>
+                    <!-- <p class="mx-10 mb-10 text-xs text-blue-400">#voyage #inspiration #essaie #pensee</p> -->
+                    <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
+                    <p class="mx-10 mb-10 text-xs text-right italic text-gray-400">Written by @sylent, 2 hours ago</p>
+                </a>
+
+                <a href="#" 
+                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                >
+                 <img src="https://picsum.photos/id/336/800/500" alt="" class="object-cover">
+                 
+                 <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">Les nouveautés</h4>
+                 <p class="mx-10 mb-10 text-sm uppercase text-gray-600 font-normal">VueJS 3</p>
+                 <!-- <p class="mx-10 mb-10 text-xs text-blue-400">#voyage #inspiration #essaie #pensee</p> -->
+                 <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
+                 <p class="mx-10 mb-10 text-xs text-right italic text-gray-400">Written by @sylent, 2 hours ago</p>
+                </a>
+
+                <a href="#" 
+                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                >
+                    <img src="https://picsum.photos/id/849/800/500" alt="" class="object-cover">
+                    
+                    <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">Découverte d'AlpineJS</h4>
+                    <p class="mx-10 mb-10 text-sm uppercase text-gray-600 font-normal">AlpineJS</p>
+                    <!-- <p class="mx-10 mb-10 text-xs text-blue-400">#voyage #inspiration #essaie #pensee</p> -->
+                    <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
+                    <p class="mx-10 mb-10 text-xs text-right italic text-gray-400">Written by @sylent, 2 hours ago</p>
+                </a>
+            </div>            
         </div>
-
-        <div class="hero h-screen bg-red-300"></div>
-
     </body>
 </html>
