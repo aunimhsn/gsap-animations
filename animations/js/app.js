@@ -1,21 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let tl = gsap.timeline();
-
-gsap.from('.gsap-title', {
+let tl = gsap.timeline({
     scrollTrigger: {
         trigger: '.gsap-title',
-        markers: true,
-        toggleActions: 'restart none none reverse'
-    },
-    x: -400,
-    duration: 1
+        toggleActions: 'restart none none reset'
+    }
 });
 
-gsap.from('.gsap-subtitle', {
-    scrollTrigger: {
-        trigger: '.gsap-subtitle'
-    },
-    x: -400,
-    duration: 1
-});
+tl.from('.gsap-title', { x: -400, opacity: 0, duration: 1, ease: 'power3' })
+  .from('.gsap-subtitle', { y: -40, opacity: 0, duration: 1, ease: 'power3'}, '-=0.5');
