@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <title>GSAP</title>
+
+            <!-- Favicon -->
+            <link rel="icon" type="image/png" href="img/favicon-default.png" />
+
+            <!-- Tailwind CSS -->
+            <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+            <!-- Fonts -->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+            <!-- Alpine JS -->
+            <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+            
+            <!-- GSAP core  -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" defer></script>
+
+            <!-- GSAP ScrollTrigger -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+            <!-- app.js -->
+            <script src="js/app.js" defer></script>
+    </head>
+
+    <body class="bg-gray-200" style="font-family: Montserrat; letter-spacing: -0.1em;">
+        
+        <!-- Scroll testing purposes -->
+        <div class="hero h-screen bg-gray-600"></div>
+
+        <!-- Title -->
+        <div class="flex flex-col justify-center w-full h-screen pl-48">
+            <div class="gsap-title absolute z-50 ml-2">
+                <h1 class="text-7xl text-gray-900 font-extrabold uppercase text-opacity-90">Articles</h1>
+            </div>
+            <div class="gsap-subtitle">
+                <h2 class="relative top-10 text-9xl text-yellow-400 font-extrabold uppercase z-10 text-opacity-40">Decouvrir</h2>
+            </div>
+        </div>
+
+        <div class="hero h-screen bg-red-300"></div>
+
+    </body>
+</html>
