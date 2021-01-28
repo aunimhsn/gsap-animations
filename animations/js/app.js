@@ -5,7 +5,6 @@ const tlArticle = gsap.timeline({
     scrollTrigger: {
         trigger: '.gsap-article-title',
         toggleActions: 'restart none none reset',
-        
     }
 });
 
@@ -23,19 +22,25 @@ gsap.from('.gsap-article-card', {
 });
 
 // To not face property confusion with translation and transition, put the gsap class selector outside the box
-gsap.from('.gsap-article-more', { 
-    scrollTrigger: {
-        trigger: '.gsap-article-more',
-        toggleActions: 'play none none reset',
-        start: 'top 20%', // Do not need end property because we are not using scrub - Find a way to the start using velocity
-        markers: true
-    },
-    y: -300,
-    rotation: -90,
-    duration: 1.5,
-    opacity: 0, 
-    ease: 'power3',
-});
+// Do not need end property because we are not using scrub - Find a way to the start using velocity
+
+/** ANIMATE WITH MATCH MEDIA
+    
+    gsap.from('.gsap-article-more', { 
+        scrollTrigger: {
+            trigger: '.gsap-article-more',
+            toggleActions: 'play none none reset',
+            start: 'top 22%', 
+            markers: true
+        },
+        x: -600,
+        rotation: -90,
+        duration: 2,
+        opacity: 0, 
+        ease: 'power2',
+    });
+
+**/
 
 // CREATIONS
 const tlCreation = gsap.timeline({
