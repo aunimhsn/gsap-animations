@@ -22,21 +22,19 @@ gsap.from('.gsap-article-card', {
     stagger: 0.2
 });
 
-// TODO: fix animation bug
-gsap.from('.gsap-more-article', { 
+// To not face property confusion with translation and transition, put the gsap class selector outside the box
+gsap.from('.gsap-article-more', { 
     scrollTrigger: {
-        trigger: '.gsap-more-article',
+        trigger: '.gsap-article-more',
         toggleActions: 'play none none reset',
-        start: 'top 20%',
-        end: 'bottom 21.4%',
+        start: 'top 20%', // Do not need end property because we are not using scrub - Find a way to the start using velocity
         markers: true
-        
     },
-    duration: 2,
-    rotation: 90,
-    opacity: 0.25, 
-
-    ease: 'none',
+    y: -300,
+    rotation: -90,
+    duration: 1.5,
+    opacity: 0, 
+    ease: 'power3',
 });
 
 // CREATIONS
