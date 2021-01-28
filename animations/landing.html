@@ -5,7 +5,7 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <title>GSAP</title>
+            <title>GSAP: Landing content animations</title>
 
             <!-- Favicon -->
             <link rel="icon" type="image/png" href="img/favicon-default.png" />
@@ -34,28 +34,35 @@
     <body class="bg-gray-200" style="font-family: Montserrat;">
         
         <!-- Scroll testing purposes -->
-        <div class="hero h-screen bg-gray-600"></div>
+        <div x-data="" class="flex justify-center items-center h-screen bg-gray-400">
+            <button class="p-6 text-white text-7xl rounded-sm bg-gray-600 focus:outline-none font-bold transition duration-300 hover:bg-gray-900" 
+                    style="font-family: Poppins;"
+                    @click="window.scrollTo({ top: document.documentElement.clientHeight, behavior: 'smooth' })"
+            >
+                SCROLL
+            </button>
+        </div>
 
         
         <div class="max-w-5xl mx-auto mt-10 mb-20">
-            <!-- Title -->
+            <!-- Article Title -->
             <div class="flex flex-col justify-center mb-24">
-                <div class="gsap-title absolute z-50">
+                <div class="gsap-article-title absolute z-50">
                     <h1 class="text-7xl text-gray-900 font-extrabold uppercase text-opacity-90" style="letter-spacing: -0.1em;">Articles</h1>
                 </div>
-                <div class="gsap-subtitle">
-                    <h2 class="relative top-10 text-9xl text-gray-400 font-extrabold uppercase z-10 text-opacity-40 -ml-2" style="letter-spacing: -0.1em;">Decouvrir</h2>
+                <div class="gsap-article-subtitle">
+                    <h2 class="relative top-10 text-9xl text-yellow-400 font-extrabold uppercase z-10 text-opacity-40 -ml-2" style="letter-spacing: -0.1em;">Decouvrir</h2>
                 </div>
             </div>
 
             <!-- Aricles Grid -->
-            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="grid lg:grid-cols-2 gap-10">
                 <a href="#" 
-                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                   class="gsap-article-card block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
                 >
                     <img src="https://picsum.photos/id/236/800/500" alt="" class="object-cover">
                     
-                    <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">A la rencontre des mondes...</h4>
+                    <h4 class="mx-10 mt-10 font-extrabold text-2xl text-gray-900" style="font-family: Poppins;">A la rencontre des mondes</h4>
                     <p class="mx-10 mb-10 text-sm uppercase text-gray-600 font-normal">Voyage & Inspiration</p>
                     <!-- <p class="mx-10 mb-10 text-xs text-blue-400">#voyage #inspiration #essaie #pensee</p> -->
                     <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
@@ -63,7 +70,7 @@
                 </a>
 
                 <a href="#" 
-                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                   class="gsap-article-card block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
                 >
                     <img src="https://picsum.photos/id/209/800/500" alt="" class="object-cover">
                     
@@ -75,7 +82,7 @@
                 </a>
 
                 <a href="#" 
-                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                   class="gsap-article-card block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
                 >
                  <img src="https://picsum.photos/id/336/800/500" alt="" class="object-cover">
                  
@@ -87,7 +94,7 @@
                 </a>
 
                 <a href="#" 
-                   class="block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
+                   class="gsap-article-card block cursor-pointer bg-white rounded-sm overflow-hidden shadow-md border-b-8 border-gray-100 duration-300 transform hover:-translate-y-6 hover:border-gray-900"
                 >
                     <img src="https://picsum.photos/id/849/800/500" alt="" class="object-cover">
                     
@@ -97,7 +104,30 @@
                     <p class="mx-10 mb-10 text-sm font-medium text-justify leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit officia obcaecati optio eaque voluptas exercitationem harum, ab und...</p>
                     <p class="mx-10 mb-10 text-xs text-right italic text-gray-400">Written by @sylent, 2 hours ago</p>
                 </a>
-            </div>            
+            </div>
+            
+            <!-- See more articles -->
+            <div class="flex justify-center items-center mt-24 mb-16">
+                <a class="gsap-more-article block bg-gray-900 rounded-full p-8 cursor-pointer text-white transition duration-300 hover:text-gray-900 hover:bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         viewBox="0 0 448 512"
+                         class="fill-current h-8 w-8"
+                    >
+                        <!-- Font Awesome Free 5.15.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                        <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Creations Title -->
+            <div class="flex flex-col justify-center mb-24">
+                <div class="gsap-creation-title absolute z-50">
+                    <h1 class="text-7xl text-gray-900 font-extrabold uppercase text-opacity-90" style="letter-spacing: -0.1em;">Creations</h1>
+                </div>
+                <div class="gsap-creation-subtitle">
+                    <h2 class="relative top-10 text-9xl text-indigo-400 font-extrabold uppercase z-10 text-opacity-40 -ml-2" style="letter-spacing: -0.1em;">Imagine</h2>
+                </div>
+            </div>
         </div>
     </body>
 </html>
